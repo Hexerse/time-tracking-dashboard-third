@@ -21,9 +21,8 @@
 }
 
 body{
-  display: grid;
-  justify-content: center;
-  height: 100vh;
+  display: flex;
+  align-items: center;
 
   background-color: var(--clr-neutral1);
   font-family: var(--ff);
@@ -33,6 +32,7 @@ body{
 section.dashboard{
   display: grid;
   width: 100%;
+
 
   grid-template-columns: 1fr;
   grid-template-rows: repeat(7, 1fr);
