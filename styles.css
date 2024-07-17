@@ -20,3 +20,55 @@
   --ff: "Rubik", sans-serif;
 }
 
+body{
+  display: grid;
+  justify-content: center;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: var(--clr-neutral1);
+  font-family: var(--ff);
+  color: white;
+}
+
+section.dashboard{
+  display: grid;
+  width: 100%;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.3fr, repeat(1fr,6);
+
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.user__template__top{
+  display: flex;
+  background-color: var(--clr-pri);
+}
+
+.user__template__top img{
+  height: 4rem;
+  border: 2px solid white;
+  border-radius: 5rem;
+  margin-right: 1rem;
+}
+
+.user__picture{
+  display: flex;
+  align-items: center;
+}
+
+.user__report{
+  align-content: center;
+}
+
+.user__report p,h2{
+  margin: 0;
+}
+
+.user__template__bottom{
+  height: 100%;
+  background-color: var(--clr-neutral2);
+}
