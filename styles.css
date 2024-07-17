@@ -1,163 +1,22 @@
-:root{
---clr-pri:hsl(246, 80%, 60%);
---clr-work:hsl(15, 100%, 70%);
---clr-play:hsl(195, 74%, 62%);
---clr-study:hsl(348, 100%, 68%);
---clr-exercise:hsl(145, 58%, 55%);
---clr-social:hsl(264, 64%, 52%);
---clr-self-care:hsl(43, 84%, 65%);
+:root {
+  --clr-pri: hsl(246, 80%, 60%);
+  --clr-work: hsl(15, 100%, 70%);
+  --clr-play: hsl(195, 74%, 62%);
+  --clr-study: hsl(348, 100%, 68%);
+  --clr-exercise: hsl(145, 58%, 55%);
+  --clr-social: hsl(264, 64%, 52%);
+  --clr-self-care: hsl(43, 84%, 65%);
 
+  --clr-neutral1: hsl(226, 43%, 10%);
+  --clr-neutral2: hsl(235, 46%, 20%);
+  --clr-neutral3: hsl(235, 45%, 61%);
+  --clr-neutral4: hsl(236, 100%, 87%);
 
---clr-neutral1:hsl(226, 43%, 10%);
---clr-neutral2:hsl(235, 46%, 20%);
---clr-neutral3:hsl(235, 45%, 61%);
---clr-neutral4:hsl(236, 100%, 87%);
+  --fs: 1.125rem;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 500;
 
---fs: 1.125rem;
---fw-light: 300;
---fw-regular: 400;
---fw-bold: 500;
-
---ff: "Rubik", sans-serif;
+  --ff: "Rubik", sans-serif;
 }
 
-body{
-    min-height: 100vh;
-    background-color: var(--clr-neutral1);
-    font-family: var(--ff);
-    color: white;
-    display: grid;
-    place-items: center;
-}
-
-section.dashboard-main{
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-auto-rows: max-content;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 3rem;
-    margin-left:3rem;
-    margin-right:3rem;
-    justify-items: center;
-    align-items: center;
-}
-
-/* Made an error as I did not add another div for top part of card*/
-
-.user-card{
-    flex-basis: auto;
-    height: 100%;
-    min-height: 10rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    background-color: var(--clr-pri);
-    align-items: flex-end;
-    border-radius: 0.7rem;
-}
-
-.user-for{
-    color: var(--clr-neutral4);
-    margin:0;
-}
-
-.user-name{
-    font-weight: var(--fw-light);
-    margin:0;
-}
-
-.user-options{
-    display: flex;
-    width: 100%;
-    height: 30%;
-    justify-content: space-around;
-    background-color: var(--clr-neutral2);
-    border-bottom-left-radius: 0.7rem;
-    border-bottom-right-radius: 0.7rem;
-}
-
-.user-options button{
-    border: none;
-    background-color: var(--clr-neutral2) ;
-    font-family: var(--ff);
-    color: white;
-    font-weight: var(--fw-bold);
-}
-
-.options:hover{
-    cursor: pointer;
-    color: var(--clr-neutral3);
-}
-
-.user-image{
-    display: flex;
-    justify-content: center;
-}
-
-.user-image img{
-    height: 4rem;
-    border: 2px solid white;
-    border-radius: 10rem;
-    margin-right: 5px;
-}
-
-.user-report{
-    display: flex;
-    flex-flow: column nowrap;
-    line-height: 1.5;
-}
-
-section.time-track{
-    display: flex;
-    flex-flow: row-reverse;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    
-}
-
-.background-image{
-    transform: translate(-2rem,-1rem);
-}
-
-.timetrack-elements{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 50%;
-}
-
-.timetrack-time{
-    display: flex;
-}
-
-.timetrack-header{
-    display: flex;
-}
-
-.element-options{
-    border: none;
-    background-color: var(--clr-work);
-}
-
-.time-track:is(.work){
-    background-color: var(--clr-work);
-}
-
-
-@media screen and (min-width:600px)
-{
-    section.dashboard-main{
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: repeat(auto-fit,minmax(20rem,1fr))
-    }
-
-    section.user-card{
-        grid-row:1/3;
-    }
-}
