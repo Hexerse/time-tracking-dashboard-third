@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+</head>
+<body>
+
+<section class="dashboard-main">
+  <section class="user-card">
+    <div class="user-image">
+      <img src="./images/image-jeremy.png" alt="Jeremy">
+    </div>
+    <div class="user-report">
+        <p class="user-for">Report for</p>
+        <h2 class="user-name">Jeremy Robson</h2>
+    </div>
+    <div class="user-options">
+      <button class="options" data-option="daily"> Daily</button>
+      <button class="options" data-option="weekly"> Weekly</button>
+      <button class="options" data-option="monthly">Monthly</button>
+    </div>
+  </section>
+
+<section class="time-track work">
+  <div class="background-image">
+    <img src="./images/icon-work.svg" alt="">
+  </div>
+  <div class="timetrack-elements">
+    <header class="timetrack-header">
+      <h2 class="element-heading">Work</h2>
+      <button class="element-options">
+        <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+      </button>
+    </header>
+      <div class="timetrack-time">
+        <h3 class="time-current">
+          32hrs
+        </h3>
+        <div class="time-previous">
+          <p class="previous-words">Last Week</p> - <p class="previous-time"> 7hrs </p>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="time-track play">
+  <div class="background-image">
+    <img src="./images/icon-play.svg" alt="">
+  </div>
+  <div class="timetrack-elements">
+    <header class="timetrack-header">
+      <h2 class="element-heading">Work</h2>
+      <button class="element-options">
+        <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+      </button>
+    </header>
+      <div class="timetrack-time">
+        <h3 class="time-current">
+          32hrs
+        </h3>
+        <div class="time-previous">
+          <p class="previous-words">Last Week</p> - <p class="previous-time"> 7hrs </p>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="time-track study">
+  <div class="background-image">
+    <img src="./images/icon-work.svg" alt="">
+  </div>
+  <div class="timetrack-elements">
+    <header class="timetrack-header">
+      <h2 class="element-heading">Work</h2>
+      <button class="element-options">
+        <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+      </button>
+    </header>
+      <div class="timetrack-time">
+        <h3 class="time-current">
+          32hrs
+        </h3>
+        <div class="time-previous">
+          <p class="previous-words">Last Week</p> - <p class="previous-time"> 7hrs </p>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="time-track exercise">
+  <div class="background-image">
+    <img src="./images/icon-work.svg" alt="">
+  </div>
+  <div class="timetrack-elements">
+    <header class="timetrack-header">
+      <h2 class="element-heading">Work</h2>
+      <button class="element-options">
+        <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+      </button>
+    </header>
+      <div class="timetrack-time">
+        <h3 class="time-current">
+          32hrs
+        </h3>
+        <div class="time-previous">
+          <p class="previous-words">Last Week</p> - <p class="previous-time"> 7hrs </p>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="time-track social">
+  <div class="background-image">
+    <img src="./images/icon-work.svg" alt="">
+  </div>
+  <div class="timetrack-elements">
+    <header class="timetrack-header">
+      <h2 class="element-heading">Work</h2>
+      <button class="element-options">
+        <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+      </button>
+    </header>
+      <div class="timetrack-time">
+        <h3 class="time-current">
+          32hrs
+        </h3>
+        <div class="time-previous">
+          <p class="previous-words">Last Week</p> - <p class="previous-time"> 7hrs </p>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="time-track selfcare">
+  <div class="background-image">
+    <img src="./images/icon-work.svg" alt="">
+  </div>
+  <div class="timetrack-elements">
+    <header class="timetrack-header">
+      <h2 class="element-heading">Work</h2>
+      <button class="element-options">
+        <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+      </button>
+    </header>
+      <div class="timetrack-time">
+        <h3 class="time-current">
+          32hrs
+        </h3>
+        <div class="time-previous">
+          <p class="previous-words">Last Week</p> - <p class="previous-time"> 7hrs </p>
+        </div>
+      </div>
+  </div>
+</section>
+
+
+
+  
+</section>
+  <script src="main.js"></script>
+</body>
+</html>
+
