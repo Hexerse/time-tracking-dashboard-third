@@ -20,7 +20,7 @@
   --ff: "Rubik", sans-serif;
 }
 
-body{
+body {
   display: flex;
   align-items: center;
 
@@ -29,19 +29,19 @@ body{
   color: white;
 }
 
-section.dashboard{
+section.dashboard {
   display: grid;
   width: 100%;
-
+  height: 100%;
 
   grid-template-columns: 1fr;
   grid-template-rows: repeat(7, 1fr);
-  
+
   gap: 1rem;
   padding: 3rem 1rem;
 }
 
-header.dashboard__user{
+header.dashboard__user {
   height: 100%;
   width: 100%;
   min-height: 10rem;
@@ -50,7 +50,7 @@ header.dashboard__user{
   border-radius: 0.7rem;
 }
 
-.user__template__top{
+.user__template__top {
   display: flex;
   height: 70%;
 
@@ -58,7 +58,7 @@ header.dashboard__user{
   border-radius: 0.7rem;
 }
 
-.user__template__top img{
+.user__template__top img {
   height: 4rem;
   border: 2px solid white;
   border-radius: 5rem;
@@ -67,28 +67,29 @@ header.dashboard__user{
   margin-left: 1.5rem;
 }
 
-.user__picture{
+.user__picture {
   display: flex;
   align-items: center;
 }
 
-.user__report{
+.user__report {
   align-content: center;
 }
 
-.user__report__for{
+.user__report__for {
   color: var(--clr-neutral4);
 }
 
-.user__name{
+.user__name {
   font-weight: var(--fw-light);
 }
 
-.user__report p,h2{
+.user__report p,
+h2 {
   margin: 0;
 }
 
-.user__template__bottom{
+.user__template__bottom {
   display: flex;
   height: 30%;
 
@@ -99,43 +100,48 @@ header.dashboard__user{
   border-bottom-right-radius: 1rem;
 }
 
-.user__template__bottom button{
+.user__buttons:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.user__template__bottom button {
   border: none;
   background-color: var(--clr-neutral2);
 
-  color: white;
+  color: var(--clr-neutral4);
 
   font-family: var(--ff);
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-regular);
 }
 
 /* Card section */
 
-section.dashboard__card:is(.work){
+section.dashboard__card:is(.work) {
   background-color: var(--clr-work);
 }
 
-section.dashboard__card:is(.play){
+section.dashboard__card:is(.play) {
   background-color: var(--clr-play);
 }
 
-section.dashboard__card:is(.study){
+section.dashboard__card:is(.study) {
   background-color: var(--clr-study);
 }
 
-section.dashboard__card:is(.exercise){
+section.dashboard__card:is(.exercise) {
   background-color: var(--clr-exercise);
 }
 
-section.dashboard__card:is(.social){
+section.dashboard__card:is(.social) {
   background-color: var(--clr-social);
 }
 
-section.dashboard__card:is(.selfcare){
+section.dashboard__card:is(.selfcare) {
   background-color: var(--clr-self-care);
 }
 
-section.dashboard__card{
+section.dashboard__card {
   display: flex;
   height: 100%;
   width: 100%;
@@ -144,12 +150,12 @@ section.dashboard__card{
   overflow: hidden;
 }
 
-.card__background{
+.card__background {
   position: absolute;
-  transform: translate(13rem,-10px);
+  transform: translate(13rem, -10px);
 }
 
-.card__text{
+.card__text {
   display: grid;
   width: 100%;
   height: 75%;
@@ -160,45 +166,86 @@ section.dashboard__card{
   border-radius: 0.7rem;
 }
 
-.card__header__button{
-  border:none;
+.card__header__button {
+  border: none;
   background-color: var(--clr-neutral2);
 }
 
-.card__header{
+.card__header {
   margin-top: 1rem;
   margin-left: 1rem;
-  margin-right:1rem;
+  margin-right: 1rem;
 }
 
-.card__header header{
+.card__text:hover .card__header__button {
+  background-color: var(--clr-neutral3);
+  cursor: pointer;
+}
+
+.card__text:hover {
+  background-color: var(--clr-neutral3);
+  cursor: pointer;
+}
+
+.card__header header {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   height: 40%;
 }
 
-.card__timings{
+.card__timings {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.card__timings__current{
+.card__timings__current {
   font-weight: var(--fw-light);
 }
 
-.card__timings__previous{
+.card__timings__previous {
   font-size: 12px;
   font-weight: var(--fw-light);
 }
 
-@media screen and (min-width:37.5rem) {
-  section.dashboard{
+@media screen and (min-width: 37.5rem) {
+  section.dashboard {
+    flex: 1;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr;
   }
 
-  .dashboard__user{
+  .dashboard__user {
     grid-row: span 2;
+  }
+
+  .user__template__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user__template__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .user__buttons {
+    margin-left: 1rem;
+  }
+
+  .user__report {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .user__name {
+    font-size: 2rem;
+  }
+
+  header.dashboard__user {
+    min-height: 20rem;
   }
 }
