@@ -119,7 +119,11 @@ const dataTimeperiod = data.forEach((data) => {
 });
 
 const renderCards = (optionChoice) => {
-
+  const renderedCards= document.querySelectorAll('.dashboard__card')
+  const clearData = renderedCards.forEach((data) =>{
+    data.remove();
+  })
+  const activityTracker = document.querySelector("section.dashboard");
   const calcTimevalue = (data) => {
     if (data === "daily") {
       return "Yesterday - ";
@@ -134,11 +138,13 @@ const renderCards = (optionChoice) => {
 
   data.forEach((activity) => {
     const name = activity.title;
-    const nameofActivity = name.replace(" ", "-");
+    const nameofActivity = name.toLowerCase().replace(" ", "-");
     const dataTimeframes = activity.timeframes;
     const dataTimeframesChoice = activity.timeframes[optionChoice];
-    
-  const stringToInject = `<section aria-labelledby="dashboard__${nameofActivity}" class="dashboard__card ${nameofActivity}">
+    const section = document.createElement("section");
+    section.classList.add(`dashboard__card`, nameofActivity);
+
+    const stringToInject = `<section aria-labelledby="dashboard__card" class="dashboard__card ${nameofActivity}">
         <div class="card__background work">
           <img src="./images/icon-${nameofActivity}.svg" alt="" />
         </div>
@@ -156,9 +162,11 @@ const renderCards = (optionChoice) => {
             </div>
           </div>
         </div>
-      </section> ` 
+      </section> `;
 
-    });
-
+    console.log(section);
+    section.innerHTML = stringToInject;
+    activityTracker.append(section);
+  });
 };
 listeningToButtons(buttons);

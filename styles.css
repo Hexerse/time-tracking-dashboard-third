@@ -137,7 +137,7 @@ section.dashboard__card:is(.social) {
   background-color: var(--clr-social);
 }
 
-section.dashboard__card:is(.selfcare) {
+section.dashboard__card:is(.self-care) {
   background-color: var(--clr-self-care);
 }
 
