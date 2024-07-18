@@ -137,8 +137,7 @@ const renderCards = (optionChoice) => {
     const nameofActivity = name.replace(" ", "-");
     const dataTimeframes = activity.timeframes;
     const dataTimeframesChoice = activity.timeframes[optionChoice];
-    const appendTo = document.body
-
+    
   const stringToInject = `<section aria-labelledby="dashboard__${nameofActivity}" class="dashboard__card ${nameofActivity}">
         <div class="card__background work">
           <img src="./images/icon-${nameofActivity}.svg" alt="" />
@@ -158,8 +157,8 @@ const renderCards = (optionChoice) => {
           </div>
         </div>
       </section> ` 
+
     });
 
-    
 };
 listeningToButtons(buttons);
